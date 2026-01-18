@@ -1,0 +1,99 @@
+{
+  "name": "yamllint-ts",
+  "displayName": "yamllint-ts",
+  "description": "YAML linting powered by a native TypeScript implementation of yamllint - no Python required",
+  "version": "0.1.0",
+  "publisher": "JasonHeld",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Keylan/yamllint-ts-vscode"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "yaml",
+    "yml",
+    "lint",
+    "linter",
+    "yamllint",
+    "validation"
+  ],
+  "icon": "icon.svg",
+  "activationEvents": [
+    "onLanguage:yaml"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "yamllint-ts",
+      "properties": {
+        "yamllint.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable yamllint"
+        },
+        "yamllint.config": {
+          "type": "string",
+          "default": "",
+          "description": "Path to yamllint configuration file. If empty, uses default rules or searches for .yamllint, .yamllint.yaml, .yamllint.yml in workspace"
+        },
+        "yamllint.lintOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Lint files when saved"
+        },
+        "yamllint.lintOnChange": {
+          "type": "boolean",
+          "default": true,
+          "description": "Lint files as you type (with debounce)"
+        },
+        "yamllint.lintOnOpen": {
+          "type": "boolean",
+          "default": true,
+          "description": "Lint files when opened"
+        },
+        "yamllint.debounceTime": {
+          "type": "number",
+          "default": 300,
+          "description": "Debounce time in milliseconds for linting on change"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "yamllint.lint",
+        "title": "Lint Current File",
+        "category": "yamllint"
+      },
+      {
+        "command": "yamllint.lintWorkspace",
+        "title": "Lint All YAML Files in Workspace",
+        "category": "yamllint"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.config.mjs",
+    "watch": "node esbuild.config.mjs --watch --no-minify",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.19.0",
+    "typescript": "^5.3.0",
+    "vitest": "^2.0.0"
+  },
+  "dependencies": {
+    "yamllint-ts": "^0.1.0"
+  }
+}

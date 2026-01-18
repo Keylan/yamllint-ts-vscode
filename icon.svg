@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90d9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c5f8c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect x="8" y="8" width="112" height="112" rx="16" ry="16" fill="url(#bg)"/>
+  <!-- YAML structure lines -->
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+    <!-- Top level key -->
+    <line x1="24" y1="32" x2="40" y2="32"/>
+    <circle cx="24" cy="32" r="4" fill="#ffffff"/>
+    <!-- Nested items -->
+    <line x1="36" y1="48" x2="72" y2="48"/>
+    <line x1="36" y1="64" x2="88" y2="64"/>
+    <line x1="36" y1="80" x2="56" y2="80"/>
+    <!-- Second top level -->
+    <line x1="24" y1="96" x2="64" y2="96"/>
+    <circle cx="24" cy="96" r="4" fill="#ffffff"/>
+  </g>
+  <!-- Checkmark -->
+  <g transform="translate(70, 60)">
+    <circle cx="24" cy="24" r="22" fill="#4caf50"/>
+    <path d="M14 24 L22 32 L36 16" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
