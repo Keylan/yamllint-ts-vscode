@@ -24,7 +24,7 @@
     "yamllint",
     "validation"
   ],
-  "icon": "icon.svg",
+  "icon": "icon.png",
   "activationEvents": [
     "onLanguage:yaml"
   ],
