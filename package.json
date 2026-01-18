@@ -4,7 +4,7 @@
   "description": "YAML linting powered by a native TypeScript implementation of yamllint - no Python required",
   "version": "0.1.0",
   "publisher": "JasonHeld",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Keylan/yamllint-ts-vscode"

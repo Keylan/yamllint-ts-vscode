@@ -1,6 +1,6 @@
 # yamllint-ts VS Code Extension
 
-A VS Code extension for linting YAML files using [yamllint-ts](https://github.com/your-username/yamllint-ts), a native TypeScript implementation of the popular Python [yamllint](https://github.com/adrienverge/yamllint) tool.
+A VS Code extension for linting YAML files using [yamllint-ts](https://github.com/Keylan/yamllint-ts), a native TypeScript implementation of the popular Python [yamllint](https://github.com/adrienverge/yamllint) tool.
 
 ## Features
 
@@ -90,4 +90,4 @@ Unlike other VS Code YAML linters that shell out to the Python yamllint binary:
 
 ## License
 
-GPL-3.0
+MIT
